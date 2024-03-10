@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+// Finished
 public class GetAllContactNames {
     @Test
     public void test1() {
