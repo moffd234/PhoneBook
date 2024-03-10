@@ -21,9 +21,7 @@ public class PhoneBook {
     }
 
     public void add(String name, String phoneNumber) {
-        ArrayList<String> pn = new ArrayList<>();
-        pn.add(phoneNumber);
-        phonebook.put(name, pn);
+        phonebook.put(name, Collections.singletonList(phoneNumber));
     }
 
     public void addAll(String name, String... phoneNumbers) {
@@ -48,7 +46,6 @@ public class PhoneBook {
 
     public String reverseLookup(String phoneNumber)  {
         for (Map.Entry<String, List<String>> entry: phonebook.entrySet()) {
-            System.out.println(entry.getValue().toString());
             String val = entry.getValue().toString();
             val = val.substring(1, val.length() - 1);
             if(Objects.equals(val, phoneNumber)){
