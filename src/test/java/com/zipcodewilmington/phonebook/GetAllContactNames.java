@@ -23,12 +23,7 @@ public class GetAllContactNames {
 
         // then
 
-        // The assert was changed because this ensuring that all the contact names were
-        // being added but the previous way the test method was written ensure the that the return
-        // value of getAllContactName is listed in the same order the names were added. However,
-        // map.getKeys() did not seem to return the keys in the same order. Will fix if a better
-        // method becomes apparent
-        Assert.assertTrue(actualNames.containsAll(Arrays.asList(names)));
+        Assert.assertEquals(Arrays.asList(names), actualNames);
     }
 
     @Test
@@ -45,12 +40,7 @@ public class GetAllContactNames {
         List<String> actualNames = phoneBook.getAllContactNames();
 
         // then
-        // The assert was changed because this ensuring that all the contact names were
-        // being added but the previous way the test method was written ensure the that the return
-        // value of getAllContactName is listed in the same order the names were added. However,
-        // map.getKeys() did not seem to return the keys in the same order. Will fix if a better
-        // method becomes apparent
-        Assert.assertTrue(actualNames.containsAll(Arrays.asList(names)));
+        Assert.assertEquals(Arrays.asList(names), actualNames);
     }
 
     @Test
@@ -67,11 +57,6 @@ public class GetAllContactNames {
         List<String> actualNames = phoneBook.getAllContactNames();
 
         // then
-        // The assert was changed because this ensuring that all the contact names were
-        // being added but the previous way the test method was written ensure the that the return
-        // value of getAllContactName is listed in the same order the names were added. However,
-        // map.getKeys() did not seem to return the keys in the same order. Will fix if a better
-        // method becomes apparent
-        Assert.assertTrue(actualNames.containsAll(Arrays.asList(names)));
+         Assert.assertEquals(Arrays.asList(names), actualNames);
     }
 }
